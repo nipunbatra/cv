@@ -13,20 +13,19 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Install LaTeX
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-xetex
-    
     - name: Build CV Full
-      run: |
-        xelatex cv.tex
-        xelatex cv.tex  # Run twice for proper references and font loading
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: cv.tex
+        compiler: xelatex
+        args: -interaction=nonstopmode
     
-    - name: Build CV Short
-      run: |
-        xelatex cv-short.tex
-        xelatex cv-short.tex
+    - name: Build CV Short  
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: cv-short.tex
+        compiler: xelatex
+        args: -interaction=nonstopmode
     
     - name: Upload PDFs as artifacts
       uses: actions/upload-artifact@v4

@@ -25,13 +25,51 @@ jobs:
     
     - name: Build CVs in parallel
       run: |
+        set -e  # Exit on any error
+        echo "Building CVs..."
         xelatex -interaction=nonstopmode cv.tex &
+        FULL_PID=$!
         xelatex -interaction=nonstopmode cv-short.tex &
-        wait
-        # Second pass for references  
+        SHORT_PID=$!
+        
+        # Wait for both and check exit codes
+        wait $FULL_PID
+        FULL_EXIT=$?
+        wait $SHORT_PID  
+        SHORT_EXIT=$?
+        
+        if [ $FULL_EXIT -ne 0 ] || [ $SHORT_EXIT -ne 0 ]; then
+          echo "First pass failed. Exit codes: Full=$FULL_EXIT, Short=$SHORT_EXIT"
+          exit 1
+        fi
+        
+        echo "Second pass for references..."
         xelatex -interaction=nonstopmode cv.tex &
+        FULL_PID=$!
         xelatex -interaction=nonstopmode cv-short.tex &
-        wait
+        SHORT_PID=$!
+        
+        wait $FULL_PID
+        FULL_EXIT=$?
+        wait $SHORT_PID
+        SHORT_EXIT=$?
+        
+        if [ $FULL_EXIT -ne 0 ] || [ $SHORT_EXIT -ne 0 ]; then
+          echo "Second pass failed. Exit codes: Full=$FULL_EXIT, Short=$SHORT_EXIT"
+          exit 1
+        fi
+        
+        echo "Build successful!"
+    
+    - name: Upload build artifacts (logs and PDFs)
+      uses: actions/upload-artifact@v4
+      if: always()  # Upload even on failure
+      with:
+        name: build-artifacts
+        path: |
+          *.pdf
+          *.log
+          *.aux
     
     - name: Setup Pages
       uses: actions/configure-pages@v4

@@ -1,0 +1,50 @@
+name: Build and Deploy CV
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install LaTeX
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-xetex
+    
+    - name: Build CV Full
+      run: |
+        xelatex cv.tex
+        xelatex cv.tex  # Run twice for proper references and font loading
+    
+    - name: Build CV Short
+      run: |
+        xelatex cv-short.tex
+        xelatex cv-short.tex
+    
+    - name: Upload PDFs as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: cv-pdfs
+        path: |
+          cv.pdf
+          cv-short.pdf
+    
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/master'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        destination_dir: .
+        keep_files: false
+        include_files: |
+          cv.pdf
+          cv-short.pdf
+          README.md

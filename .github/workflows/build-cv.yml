@@ -46,4 +46,4 @@ jobs:
         include_files: |
           cv.pdf
           cv-short.pdf
-          README.md
+          index.html

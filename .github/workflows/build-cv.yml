@@ -9,23 +9,24 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: registry.gitlab.com/islandoftex/images/tinytex:latest
     
     steps:
     - uses: actions/checkout@v4
     
-    - name: Build CV Full
-      uses: xu-cheng/latex-action@v3
-      with:
-        root_file: cv.tex
-        compiler: xelatex
-        args: -interaction=nonstopmode
+    - name: Install missing packages
+      run: |
+        tlmgr install sourcesanspro sourcecodepro fontspec xetex || true
     
-    - name: Build CV Short  
-      uses: xu-cheng/latex-action@v3
-      with:
-        root_file: cv-short.tex
-        compiler: xelatex
-        args: -interaction=nonstopmode
+    - name: Build CVs in parallel
+      run: |
+        xelatex -interaction=nonstopmode cv.tex &
+        xelatex -interaction=nonstopmode cv-short.tex &
+        wait
+        # Second pass for references  
+        xelatex -interaction=nonstopmode cv.tex &
+        xelatex -interaction=nonstopmode cv-short.tex &
+        wait
     
     - name: Upload PDFs as artifacts
       uses: actions/upload-artifact@v4

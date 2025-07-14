@@ -23,12 +23,15 @@ jobs:
       uses: r-lib/actions/setup-tinytex@v2
     
     - name: Install packages
-      run: tlmgr install sourcesanspro sourcecodepro fontspec xetex scalerel fancyhdr datetime comment fmtcount fontawesome wasysym xcolor wasy wasy-type1 || true
+      run: tlmgr install sourcesanspro sourcecodepro fontspec xetex scalerel fancyhdr datetime comment fmtcount fontawesome wasysym xcolor wasy wasy-type1 microtype lastpage || true
     
     - name: Build CVs in parallel
       run: |
         set -e  # Exit on any error
         echo "Building CVs..."
+        
+        # First pass
+        echo "First pass..."
         xelatex -interaction=nonstopmode cv.tex &
         FULL_PID=$!
         xelatex -interaction=nonstopmode cv-short.tex &
@@ -45,6 +48,7 @@ jobs:
           exit 1
         fi
         
+        # Second pass to resolve references (page numbers, etc.)
         echo "Second pass for references..."
         xelatex -interaction=nonstopmode cv.tex &
         FULL_PID=$!

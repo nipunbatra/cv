@@ -63,11 +63,17 @@ urlcolor=black
 \usepackage{fancyhdr}
 \usepackage{datetime}
 \usepackage{wasysym} % for symbols
+\usepackage{microtype} % for better typography
+\usepackage{lastpage} % for total page count
 
 \fancyhf{}
-\fancyfoot[L]{Last updated: \today}
+\fancyfoot[L]{\small\textcolor{gray}{Last updated: \today}}
+\fancyfoot[C]{\small\textcolor{gray}{Nipun Batra • \href{mailto:nipun.batra@iitgn.ac.in}{nipun.batra@iitgn.ac.in}}}
+\fancyfoot[R]{\small\textcolor{gray}{Page \thepage\ of \pageref{LastPage}}}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{gray}\leaders\hrule height \footrulewidth\hfill}}
 \begin{document}
 
 % Compact spacing

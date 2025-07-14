@@ -4,7 +4,7 @@
 
 \documentclass[letter,10pt]{article}
 \usepackage[left=1.3cm,right=1.3cm,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage[T1]{fontenc}
 \usepackage{hyperref}
 \usepackage{scalerel}
@@ -62,6 +62,7 @@ urlcolor=black
 \usepackage{multicol}
 \usepackage{fancyhdr}
 \usepackage{datetime}
+\usepackage{wasysym} % for symbols
 
 \fancyhf{}
 \fancyfoot[L]{Last updated: \today}
@@ -69,14 +70,16 @@ urlcolor=black
 \renewcommand{\headrulewidth}{0.0pt}
 \begin{document}
 
-\setlength\itemsep{-1em}
+% Compact spacing
+\setlength\itemsep{-0.5em}
+\setlength\parskip{0.1em}
+\renewcommand{\baselinestretch}{1.0}
 
 \begin{center}
-	\begin{Large}
-		\textbf{Nipun Batra}\\
-	\end{Large}
-	
+	{\Large\textbf{Nipun Batra}}\\[0.2em]
+	\textit{Harnessing AI to create a sustainable future where technology serves both people and planet}
 \end{center}
+\vspace{0.3em}
 
 %\begin{small}
 %	Rice Hall 530, Computer Science Department\\
@@ -93,16 +96,18 @@ urlcolor=black
 Nationality: Indian \\
 Website: \href{https://nipunbatra.github.io}{https://nipunbatra.github.io} \\ 
 Email: \href{mailto:nipun.batra@iitgn.ac.in}{nipun.batra@iitgn.ac.in} \\
-ORCID: \href{https://orcid.org/0000-0002-1418-7659}{0000-0002-1418-7659} \\
+ORCID: \href{https://orcid.org/0000-0002-0736-7169}{0000-0002-0736-7169} \\
 Address: 13/401C, Academic Block\\
 	IIT Gandhinagar,
 	Gujarat, India - 382355\\
 Github: \href{https://github.com/nipunbatra}{https://github.com/nipunbatra}\\
+Lab: \href{https://sustainability-lab.github.io/}{Sustainability Lab} \\
 Phone: +91 079 2395 2539
 \end{small}
 \end{multicols}
 
-\subsection*{{\sc \textbf{Current Role}}\hspace{5pt}\noindent\hrulefill}
+\subsection*{\textbf{Current Role}}
+\vspace{-0.4em}
 \begin{itemize}
 \item[] 
     \textbf{Associate Professor} \hfill \textit{Nov 2024 - Present}\\
@@ -114,7 +119,8 @@ Phone: +91 079 2395 2539
 	IIT Gandhinagar, Gujarat, India
 \end{itemize}
 %\hline
-\subsection*{{\sc \textbf{Education}}\hspace{5pt}\noindent\hrulefill}
+\subsection*{\textbf{Education}}
+\vspace{-0.4em}
 \begin{itemize}
 \item[] 
     \textbf{PhD in Computer Science}, \hfill \textit{Jan 2012 - Mar 2017 (submitted Nov 2016, defended Mar 2017)}\\
@@ -141,9 +147,12 @@ Phone: +91 079 2395 2539
 
 \end{itemize}
 
-\subsection*{\sc \textbf{Grants}\hspace{5pt}\noindent\hrulefill}
-Summary: 8+ sponsored projects, approximately 4+ crore INR raised
+\subsection*{\textbf{Grants}}
+\vspace{-0.4em}
+Summary: 9+ sponsored projects, approximately 4.6+ crore INR raised
 \begin{itemize}
+    \item[]{\textbf{PI: }exploreCSR: Bridging Digital Divides Through Computing}\hfill\textit{2025} \\
+        Google Faculty Research Award (Amount: $\approx$ Rs. 64 lacs)
  \ifcvshort\else
  \item[]{\textbf{PI: }Active Air: Active Learning for Air Quality Station Deployment}\hfill\textit{2022} \\
         GUJCOST (Amount: $\approx$ Rs. 17 lacs)
@@ -168,7 +177,8 @@ Summary: 8+ sponsored projects, approximately 4+ crore INR raised
     \fi
 \end{itemize}
 
-\subsection*{\sc \textbf{Honours, Awards and Recognitions}\hspace{5pt}\noindent\hrulefill}
+\subsection*{\textbf{Honours, Awards and Recognitions}}
+\vspace{-0.4em}
 \begin{itemize}
 \item[]{SIGEnergy Rising Star Award} \hfill\textit{2025}\\
     \textit{For contributions to reproducible toolkits, scalable models, and uncertainty-aware approaches for practical energy disaggregation}
@@ -203,8 +213,11 @@ Summary: 8+ sponsored projects, approximately 4+ crore INR raised
     
 \end{itemize}
 
-\subsection*{\sc \textbf{Students: Honours, Awards and Recognitions}\hspace{5pt}\noindent\hrulefill}
+\subsection*{\textbf{Students: Honours, Awards and Recognitions}}
+\vspace{-0.4em}
 \begin{itemize}
+\item[]{Commendation for Outstanding Research (PhD) – Dr. Rishiraj Adhikary (PhD Alumnus)} \hfill\textit{June 2025}\\
+    \textit{IIT Gandhinagar Convocation 2025}
 \item[]{Ph.D. student Rishiraj Adhikary is a finalist at Gaetano Borriello Outstanding Student Award} \hfill\textit{2023}
 \item[]{M.Tech. student Ankita Jain awarded Gold Medal for the Outstanding Research at IITGn convocation} \hfill\textit{2023}
 \item[]{Ph.D. student Rishiraj Adhikary awarded Fullbright Nehru Doctoral Fellowship to visit CMU} \hfill\textit{2022}
@@ -214,7 +227,8 @@ Summary: 8+ sponsored projects, approximately 4+ crore INR raised
 \end{itemize}
 
 
-\subsection*{\sc \textbf{Selected Research \& Industrial Experience}\hspace{5pt}\noindent\hrulefill}
+\subsection*{\textbf{Selected Research \& Industrial Experience}}
+\vspace{-0.4em}
 
 
 
@@ -261,25 +275,16 @@ Summary: 8+ sponsored projects, approximately 4+ crore INR raised
 
 
 
-\subsection*{\sc \textbf{Teaching Experience}\hspace{5pt}\noindent\hrulefill}
-
-
+\subsection*{\textbf{Teaching Experience}}
+\vspace{-0.4em}
 \begin{itemize}
-
-\item[]
-    Probabilistic Machine Learning: 2022, 2023
-\item[]
-    Introduction to Programming: 2020, 2021, 2022
- \item[]
-   Machine Learning: 2019, 2020, 2021, 2022, 2023
-    \item[]
-   Advanced Machine Learning: 2019
- \item[]
-    Operating Systems: 2018, 2019, 2020
- \item[]
-  Graduate Systems: 2018, 2019, 2020
-\item[]
-   Ubiquitous Computing: 2021
+\item[] \textbf{AI for Social Good}: Spring 2025
+\item[] \textbf{Probability, Statistics, and Data Visualization}: Spring 2025
+\item[] \textbf{Machine Learning}: Spring 2025, Fall 2024, Spring 2024, Spring 2023, Spring 2022, Spring 2021, Spring 2020, Spring 2019
+\item[] \textbf{Probabilistic Machine Learning}: Fall 2023, Fall 2022
+\item[] \textbf{Introduction to Computing}: Winter 2022, Winter 2021, Winter 2020
+\item[] \textbf{Ubiquitous Computing}: Fall 2021
+\item[] \textbf{Operating Systems}: Fall 2020, Fall 2019, Fall 2018
   
 \begin{comment}
 
@@ -306,10 +311,11 @@ Summary: 8+ sponsored projects, approximately 4+ crore INR raised
 
 
 
-\subsection*{{\sc \textbf{Publications} (\href{https://scholar.google.com/citations?user=rFGzHlIAAAAJ&hl=en}{Google Scholar profile})}\hspace{5pt}\noindent\hrulefill}
+\subsection*{\textbf{Publications} (\href{https://scholar.google.com/citations?user=rFGzHlIAAAAJ&hl=en}{Google Scholar profile})}
+\vspace{-0.4em}
 
-Citation Summary (as of 2024)\\ 
-Total citations - 2400+, h-Index - 25, i10-Index: 24
+Citation Summary (as of 2025)\\ 
+Total citations - ~3000, h-Index - 21, i10-Index: 25
 
 \begin{itemize}
     \item[]\textbf{Selected Peer-reviewed articles}\footnote{A* or A conferences as per \href{http://portal.core.edu.au/conf-ranks/} {2018 CORE CS rankings} are highlighted using \textbf{*}}  
@@ -319,15 +325,13 @@ Total citations - 2400+, h-Index - 25, i10-Index: 24
     \textit{Space to Policy: Scalable Brick Kiln Detection and Automatic Compliance Monitoring with Geospatial Data}\\
     {ACM Journal on Computing and Sustainable Societies (JCSS), 2025}
 
+    \item{Rishiraj Adhikary, Maite Sadeh, \textbf{Nipun Batra}, Mayank Goel}\\
+    \textit{JoulesEye: Energy Expenditure Estimation and Respiration Sensing from Thermal Imagery While Exercising}\\
+      \textbf{*~}{ACM Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT), 2024}
+
     \item{Sachin Chauhan, Zeel Patel, Sayan Ranu, Rijurekha Sen, and \textbf{Nipun Batra}}\\
     \textit{Fine-Grained Spatio-Temporal Particulate Matter Dataset From Delhi For ML based Modeling}\\
     \textbf{*~}{NeurIPS, 2023}
-
-
-
-    \item{Rishiraj Adhikary, Maite Sadeh, \textbf{Nipun Batra}, Mayank Goel}\\
-    \textit{JoulesEye: Energy Expenditure Estimation and Respiration Sensing from Thermal Imagery While Exercising}\\
-      {ACM Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT), 2024}
 
     \item{Rishiraj Adhikary, Dhruvi Lodhavia, Chris Francis, Rohit Patil, Tanmay Srivastava, Prerna Khanna, \textbf{Nipun Batra}, Joseph Breda, Jacob Peplinski, Shwetak Patel}\\
     \textit{SpiroMask: measuring Lung function using consumer-grade masks}\\
@@ -418,12 +422,12 @@ Total citations - 2400+, h-Index - 25, i10-Index: 24
 	\item 
 			{\textbf{Nipun Batra}, Jack Kelly, Oliver Parson, Haimonti Dutta, William Knottenbelt, Alex Rogers, Amarjeet Singh, and Mani Srivastava}\\
         \textit{NILMTK: An Open Source Toolkit for Non-intrusive Load Monitoring}\\
-		{ACM eEnergy 2014. Cambridge, UK \textbf{(Acceptance rate: 20\%, 500+ citations)}}
+		{ACM eEnergy 2014. Cambridge, UK \textbf{(Acceptance rate: 20\%, \includegraphics[height=0.8em]{trophy.pdf}~ 710 citations)}}
 		
 	\item 
 	{\textbf{Nipun Batra}, Manoj Gulati, Amarjeet Singh, and Mani Srivastava}\\
 	\textit{It's Different: Insights into home energy consumption in India}\\
-    \textbf{*~}{Buildsys 2013, Rome, Italy \textbf{(180+ citations)}}
+    \textbf{*~}{Buildsys 2013, Rome, Italy \textbf{(242 citations)}}
    
    \item 
    		{Pandarasamy Arjunan, \textbf{Nipun Batra}, Haksoo Choi, Amarjeet Singh, Pushpendra Singh, and Mani Srivastava} \\
@@ -462,14 +466,14 @@ ACM Ubicomp 2022
     
         \item {\textbf{Nipun Batra}} \\
         \textit{Non Intrusive Load Monitoring: Systems, Metrics and Use Cases} \\
- \textbf{[Best presentation award]}
-{Sensys 2015 \textbf{(Best presentation award)}}
+ \textbf{[\includegraphics[height=0.8em]{trophy.pdf}~ Best presentation award]}
+{Sensys 2015}
 
 \item {Jack Kelly, \textbf{Nipun Batra}, Oliver Parson, Haimonti Dutta, William Knottenbelt, Alex Rogers, Amarjeet Singh,
 	and Mani Srivastava}\\
 \textit{NILMTK v0. 2: A Non-intrusive Load Monitoring Toolkit for Large Scale Data Sets}\\ 
- \textbf{[Best demo award]}
-{Buildsys 2014 \textbf{(Best demo award)}}
+ \textbf{[\includegraphics[height=0.8em]{trophy.pdf}~ Best demo award]}
+{Buildsys 2014}
 
 \item {\textbf{Nipun Batra}, Manoj Gulati, Puneet Jain, Kamin Whitehouse and Amarjeet Singh} \\ 
 \textit{Bits and watts: improving
@@ -504,7 +508,8 @@ ACM Ubicomp 2022
 \end{itemize}
 
 
-\subsection*{\sc \textbf{Service}\hspace{5pt}\noindent\hrulefill}
+\subsection*{\textbf{Service}}
+\vspace{-0.4em}
 I have served in the program committee of various conferences such as: AAAI, Buildsys, COMPASS, or review committee of various journals such as Nature Scientific Data, Nature Scientific Reports, Energy and Buildings. In the interest of space, I am listing only selected services:
 
 \begin{itemize}
@@ -571,9 +576,12 @@ I have served in the program committee of various conferences such as: AAAI, Bui
 \end{itemize}
 
 
-\subsection*{\sc \textbf{Selected Invited Talks}\hspace{5pt}\noindent\hrulefill}
+\subsection*{\textbf{Selected Invited Talks}}
+\vspace{-0.4em}
 
 \begin{itemize}
+      \item[] {ACM SIGEnergy Rising Star Award talk} \hfill \textit{2025}
+      \item[] {ACM Compass Doctoral Colloquium Keynote} \hfill \textit{2024}
       \item[] {IIT Gandhinagar, Chaitanya Khoj}
 	 \textit{AI for school children (300+ students from multiple schools attended)} \hfill \textit{2018}
       \item[] {IIT Gandhinagar, Delhi, Bombay, Kanpur; IIIT Hyd; IISC, MSR India}

@@ -10,12 +10,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
     
     steps:
     - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Setup TinyTeX
       uses: r-lib/actions/setup-tinytex@v2
@@ -69,6 +71,8 @@ jobs:
         git add cv.pdf cv-short.pdf
         git diff --staged --quiet || git commit -m "🤖 Update PDFs [skip ci]"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Upload build artifacts (logs and PDFs)
       uses: actions/upload-artifact@v4

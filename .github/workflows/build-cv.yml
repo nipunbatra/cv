@@ -67,16 +67,8 @@ jobs:
         
         echo "Build successful!"
     
-    - name: Commit and push PDFs
-      if: github.ref == 'refs/heads/master'
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add cv.pdf cv-short.pdf
-        git diff --staged --quiet || git commit -m "🤖 Update PDFs [skip ci]"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # Note: PDFs are only deployed to GitHub Pages, not committed to repo
+    # This prevents git sync issues when working locally
     
     - name: Upload build artifacts (logs and PDFs)
       uses: actions/upload-artifact@v4

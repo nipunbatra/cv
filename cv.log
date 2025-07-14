@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.17)  14 JUL 2025 14:57
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.17)  14 JUL 2025 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1089,21 +1089,21 @@ LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 86.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 100.
+(Font)              scaled to size 9.0pt on input line 108.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 115.
+(Font)              scaled to size 12.0pt on input line 123.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 115.
+(Font)              scaled to size 12.0pt on input line 123.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 119.
+(Font)              scaled to size 10.0pt on input line 127.
  (/Users/nipun/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
 File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Modern Roman (RS)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 161.
+(Font)              <7> on input line 182.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 161.
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 161.
+(Font)              <5> on input line 182.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 182.
  (/Users/nipun/Library/TinyTeX/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 ) (/Users/nipun/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.cfg
@@ -1111,32 +1111,31 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 )
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 191.
+(Font)              <9> on input line 200.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 191.
+(Font)              <6> on input line 200.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 191.
+(Font)              scaled to size 6.0pt on input line 200.
 [1
 
 ]
 
 [2]
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 327.
+(Font)              scaled to size 7.0pt on input line 377.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 327.
+(Font)              scaled to size 8.0pt on input line 377.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 327.
+(Font)              <8> on input line 377.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 327.
+(Font)              scaled to size 8.0pt on input line 377.
 
 
 [3]
-File: trophy.pdf Graphic file (type pdf)
-<use trophy.pdf>
-
 
 [4]
+File: trophy.pdf Graphic file (type pdf)
+<use trophy.pdf>
 File: trophy.pdf Graphic file (type pdf)
 <use trophy.pdf>
 File: trophy.pdf Graphic file (type pdf)
@@ -1145,7 +1144,9 @@ File: trophy.pdf Graphic file (type pdf)
 
 [5]
 
-[6] 
+[6]
+
+[7] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./cv.aux)
  ***********
@@ -1158,10 +1159,10 @@ Package rerunfilecheck Info: File `cv.out' has not changed.
 Here is how much of TeX's memory you used:
  15657 strings out of 476219
  312739 string characters out of 5785602
- 1941557 words of memory out of 5000000
+ 1938557 words of memory out of 5000000
  37914 multiletter control sequences out of 15000+600000
  565941 words of font info for 112 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  79i,14n,124p,1018b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on cv.pdf (6 pages).
+Output written on cv.pdf (7 pages).

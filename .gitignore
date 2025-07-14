@@ -21,9 +21,8 @@
 *.vrb
 *.xdv
 
-# Keep PDFs for distribution
-!cv.pdf
-!cv-short.pdf
+# PDFs are built by GitHub Actions, ignore local builds
+*.pdf
 
 # OS specific files
 .DS_Store

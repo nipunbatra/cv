@@ -23,7 +23,10 @@ jobs:
       uses: r-lib/actions/setup-tinytex@v2
     
     - name: Install packages
-      run: tlmgr install sourcesanspro sourcecodepro fontspec xetex scalerel fancyhdr datetime comment fmtcount fontawesome wasysym xcolor wasy wasy-type1 microtype lastpage || true
+      run: |
+        tlmgr install sourcecodepro fontspec xetex scalerel fancyhdr datetime comment fmtcount fontawesome wasysym xcolor wasy wasy-type1 microtype lastpage || true
+        # sourcesanspro was renamed to sourcesans in TeX Live 2026 (sourcesans still provides sourcesanspro.sty)
+        tlmgr install sourcesans || tlmgr install sourcesanspro
     
     - name: Build CVs in parallel
       run: |
